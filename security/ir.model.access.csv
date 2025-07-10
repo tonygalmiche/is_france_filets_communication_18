@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_is_segment,access_is_segment,model_is_segment,base.group_user,1,1,1,1
+access_is_region,access_is_region,model_is_region,base.group_user,1,1,1,1
+access_is_mailing_list_assistant,access_is_mailing_list_assistant,model_is_mailing_list_assistant,base.group_user,1,1,1,1
+
