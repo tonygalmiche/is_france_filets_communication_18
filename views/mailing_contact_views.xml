@@ -1,207 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-        <!-- is.mailing.list.assistant -->
-        <record id="is_mailing_list_assistant_form" model="ir.ui.view">
-            <field name="name">is.mailing.list.assistant.form</field>
-            <field name="model">is.mailing.list.assistant</field>
-            <field name="arch" type="xml">
-                <form>
-                    <header style="min-height:31px;">
-                        <button name="desactiver_contacts" type="object" string="Désactiver les contacts"/>
-                        <button name="ajouter_contacts"    type="object" string="Ajouter les contacts à la liste"/>
-                    </header>
-                    <sheet>
-                        <group>
-                            <field name="name"/>
-                            <field name="list_id"/>
-                            <field name="mails"/>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
-        <record id="is_mailing_list_assistant_tree" model="ir.ui.view">
-            <field name="name">is.mailing.list.assistant.tree</field>
-            <field name="model">is.mailing.list.assistant</field>
-            <field name="arch" type="xml">
-                <list>
-                    <field name="name"/>
-                    <field name="list_id"/>
-                </list>
-            </field>
-        </record>
-        <record id="is_mailing_list_assistant_search" model="ir.ui.view">
-            <field name="name">is.mailing.list.assistant.search</field>
-            <field name="model">is.mailing.list.assistant</field>
-            <field name="arch" type="xml">
-                <search>
-                    <field name="name"/>
-                    <field name="list_id"/>
-                    <field name="mails"/>
-               </search>
-            </field>
-        </record>
-        <record  id="is_mailing_list_assistant_action" model="ir.actions.act_window">
-            <field name="name">Assistant de liste de diffusion</field>
-            <field name="res_model">is.mailing.list.assistant</field>
-            <field name="limit">100</field>
-            <field name="view_mode">list,form</field>
-        </record>
-        <menuitem name="Assistant de liste de diffusion" id="is_mailing_list_assistant_menu"
-            parent="mass_mailing.mass_mailing_mailing_list_menu" sequence="95"
-            action="is_mailing_list_assistant_action"/>
+    <!-- is.mailing.list.assistant -->
+    <record id="is_mailing_list_assistant_form" model="ir.ui.view">
+        <field name="name">is.mailing.list.assistant.form</field>
+        <field name="model">is.mailing.list.assistant</field>
+        <field name="arch" type="xml">
+            <form>
+                <header style="min-height:31px;">
+                    <button name="desactiver_contacts" type="object" string="Désactiver les contacts"/>
+                    <button name="ajouter_contacts"    type="object" string="Ajouter les contacts à la liste"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="list_id"/>
+                        <field name="mails"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="is_mailing_list_assistant_tree" model="ir.ui.view">
+        <field name="name">is.mailing.list.assistant.tree</field>
+        <field name="model">is.mailing.list.assistant</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="list_id"/>
+            </list>
+        </field>
+    </record>
+    <record id="is_mailing_list_assistant_search" model="ir.ui.view">
+        <field name="name">is.mailing.list.assistant.search</field>
+        <field name="model">is.mailing.list.assistant</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="list_id"/>
+                <field name="mails"/>
+            </search>
+        </field>
+    </record>
+    <record  id="is_mailing_list_assistant_action" model="ir.actions.act_window">
+        <field name="name">Assistant de liste de diffusion</field>
+        <field name="res_model">is.mailing.list.assistant</field>
+        <field name="limit">100</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <menuitem name="Assistant de liste de diffusion" id="is_mailing_list_assistant_menu"
+        parent="mass_mailing.mass_mailing_mailing_list_menu" sequence="95"
+        action="is_mailing_list_assistant_action"/>
 
 
-        <!-- is.segment -->
-        <record id="is_segment_form" model="ir.ui.view">
-            <field name="name">is.segment.form</field>
-            <field name="model">is.segment</field>
-            <field name="arch" type="xml">
-                <form>
-                    <sheet>
-                        <group>
-                            <field name="name"/>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
-        <record id="is_segment_tree" model="ir.ui.view">
-            <field name="name">is.segment.tree</field>
-            <field name="model">is.segment</field>
-            <field name="arch" type="xml">
-                <list>
-                    <field name="name"/>
-                </list>
-            </field>
-        </record>
-        <record id="is_segment_search" model="ir.ui.view">
-            <field name="name">is.segment.search</field>
-            <field name="model">is.segment</field>
-            <field name="arch" type="xml">
-                <search>
-                    <field name="name"/>
-               </search>
-            </field>
-        </record>
-        <record  id="is_segment_action" model="ir.actions.act_window">
-            <field name="name">Segment</field>
-            <field name="res_model">is.segment</field>
-            <field name="limit">100</field>
-            <field name="view_mode">list,form</field>
-        </record>
-        <menuitem name="Segment" id="is_segment_menu"
-            parent="mass_mailing.mass_mailing_mailing_list_menu" sequence="90"
-            action="is_segment_action"/>
+    <!-- is.segment -->
+    <record id="is_segment_form" model="ir.ui.view">
+        <field name="name">is.segment.form</field>
+        <field name="model">is.segment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="is_segment_tree" model="ir.ui.view">
+        <field name="name">is.segment.tree</field>
+        <field name="model">is.segment</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+    <record id="is_segment_search" model="ir.ui.view">
+        <field name="name">is.segment.search</field>
+        <field name="model">is.segment</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+    <record  id="is_segment_action" model="ir.actions.act_window">
+        <field name="name">Segment</field>
+        <field name="res_model">is.segment</field>
+        <field name="limit">100</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <menuitem name="Segment" id="is_segment_menu"
+        parent="mass_mailing.mass_mailing_mailing_list_menu" sequence="90"
+        action="is_segment_action"/>
 
 
-        <!-- is.region -->
-        <record id="is_region_form" model="ir.ui.view">
-            <field name="name">is.region.form</field>
-            <field name="model">is.region</field>
-            <field name="arch" type="xml">
-                <form>
-                    <sheet>
-                        <group>
-                            <field name="name"/>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
-        <record id="is_region_tree" model="ir.ui.view">
-            <field name="name">is.region.tree</field>
-            <field name="model">is.region</field>
-            <field name="arch" type="xml">
-                <list>
-                    <field name="name"/>
-                </list>
-            </field>
-        </record>
-        <record id="is_region_search" model="ir.ui.view">
-            <field name="name">is.region.search</field>
-            <field name="model">is.region</field>
-            <field name="arch" type="xml">
-                <search>
-                    <field name="name"/>
-               </search>
-            </field>
-        </record>
-        <record  id="is_region_action" model="ir.actions.act_window">
-            <field name="name">Région</field>
-            <field name="res_model">is.region</field>
-            <field name="limit">100</field>
-            <field name="view_mode">list,form</field>
-        </record>
-        <menuitem name="Région" id="is_region_menu"
-            parent="mass_mailing.mass_mailing_mailing_list_menu" sequence="95"
-            action="is_region_action"/>
+    <!-- is.region -->
+    <record id="is_region_form" model="ir.ui.view">
+        <field name="name">is.region.form</field>
+        <field name="model">is.region</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="is_region_tree" model="ir.ui.view">
+        <field name="name">is.region.tree</field>
+        <field name="model">is.region</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+    <record id="is_region_search" model="ir.ui.view">
+        <field name="name">is.region.search</field>
+        <field name="model">is.region</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+    <record  id="is_region_action" model="ir.actions.act_window">
+        <field name="name">Région</field>
+        <field name="res_model">is.region</field>
+        <field name="limit">100</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <menuitem name="Région" id="is_region_menu"
+        parent="mass_mailing.mass_mailing_mailing_list_menu" sequence="95"
+        action="is_region_action"/>
 
 
-        <!-- mailing.contact -->
-        <record id="is_mailing_contact_view_form" model="ir.ui.view">
-            <field name="name">is_mailing_contact_view_form</field>
-            <field name="model">mailing.contact</field>
-            <field name="inherit_id" ref="mass_mailing.mailing_contact_view_form"/>
-            <field name="arch" type="xml">
-                <field name="title_id" position="replace">
-                    <field name="is_code_ape"/>
-                    <field name="is_ville"/>
-                    <field name="is_code_postal"/>
-                    <field name="is_rue"/>
-                    <field name="is_region_id"/>
-                    <field name="is_telephone"/>
-                    <field name="is_fax"/>
-                    <field name="is_site_internet"/>
-                    <field name="is_segment_id"/>
-                </field>
-                <field name="country_id" position="replace"/>
-                <field name="message_bounce" position="after">
-                    <field name="active"/>
-                </field>
+    <!-- mailing.contact -->
+    <record id="is_mailing_contact_view_form" model="ir.ui.view">
+        <field name="name">is_mailing_contact_view_form</field>
+        <field name="model">mailing.contact</field>
+        <field name="inherit_id" ref="mass_mailing.mailing_contact_view_form"/>
+        <field name="arch" type="xml">
+            <field name="title_id" position="replace">
+                <field name="is_code_ape"/>
+                <field name="is_ville"/>
+                <field name="is_code_postal"/>
+                <field name="is_rue"/>
+                <field name="is_region_id"/>
+                <field name="is_telephone"/>
+                <field name="is_fax"/>
+                <field name="is_site_internet"/>
+                <field name="is_segment_id"/>
             </field>
-        </record>.
-        <record id="is_mailing_contact_view_tree" model="ir.ui.view">
-            <field name="name">is_mailing_contact_view_tree</field>
-            <field name="model">mailing.contact</field>
-            <field name="inherit_id" ref="mass_mailing.mailing_contact_view_tree"/>
-            <field name="arch" type="xml">
-                <field name="email" position="after">
-                    <field name="is_ville"       optional="show"/>
-                    <field name="is_code_postal" optional="show"/>
-                    <field name="is_region_id"   optional="show"/>
-                    <field name="is_telephone"   optional="show"/>
-                    <field name="is_segment_id"  optional="show"/>
-                </field>
+            <field name="country_id" position="replace"/>
+            <field name="message_bounce" position="after">
+                <field name="active"/>
             </field>
-        </record>
-        <record id="is_mailing_contact_view_search" model="ir.ui.view">
-            <field name="name">is_mailing_contact_view_search</field>
-            <field name="model">mailing.contact</field>
-            <field name="inherit_id" ref="mass_mailing.mailing_contact_view_search"/>
-            <field name="arch" type="xml">
-                <field name="name" position="after">
-                    <field name="email"/>
-                    <field name="is_code_ape"/>
-                    <field name="is_ville"/>
-                    <field name="is_code_postal"/>
-                    <field name="is_rue"/>
-                    <field name="is_region_id"/>
-                    <field name="is_site_internet"/>
-                    <field name="is_segment_id"/>
-                </field>
+        </field>
+    </record>.
+    <record id="is_mailing_contact_view_tree" model="ir.ui.view">
+        <field name="name">is_mailing_contact_view_tree</field>
+        <field name="model">mailing.contact</field>
+        <field name="inherit_id" ref="mass_mailing.mailing_contact_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="email" position="after">
+                <field name="is_ville"       optional="show"/>
+                <field name="is_code_postal" optional="show"/>
+                <field name="is_region_id"   optional="show"/>
+                <field name="is_telephone"   optional="show"/>
+                <field name="is_segment_id"  optional="show"/>
             </field>
-        </record>
-        <record id="add_last_mailing_list_action" model="ir.actions.server">
-            <field name="name">Ajouter à la dernière liste de diffusion</field>
-            <field name="model_id" ref="model_mailing_contact"/>
-            <field name="binding_model_id" ref="mass_mailing.model_mailing_contact"/>
-            <field name="binding_view_types">list</field>
-            <field name="state">code</field>
-            <field name="code">
-                action = model.add_last_mailing_list_action()
+        </field>
+    </record>
+    <record id="is_mailing_contact_view_search" model="ir.ui.view">
+        <field name="name">is_mailing_contact_view_search</field>
+        <field name="model">mailing.contact</field>
+        <field name="inherit_id" ref="mass_mailing.mailing_contact_view_search"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="email"/>
+                <field name="is_code_ape"/>
+                <field name="is_ville"/>
+                <field name="is_code_postal"/>
+                <field name="is_rue"/>
+                <field name="is_region_id"/>
+                <field name="is_site_internet"/>
+                <field name="is_segment_id"/>
             </field>
-        </record>
+        </field>
+    </record>
+    <record id="add_last_mailing_list_action" model="ir.actions.server">
+        <field name="name">Ajouter à la dernière liste de diffusion</field>
+        <field name="model_id" ref="model_mailing_contact"/>
+        <field name="binding_model_id" ref="mass_mailing.model_mailing_contact"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = model.add_last_mailing_list_action()
+        </field>
+    </record>
+
+
+
+
+    <!-- Déplacement des menus inutiles -->
+    <menuitem id="mail.menu_root_discuss"     parent="base.menu_custom" sequence="900"/>
+    <menuitem id="utm.menu_link_tracker_root" parent="base.menu_custom" sequence="901"/>
+    <menuitem id="contacts.menu_contacts"     parent="base.menu_custom" sequence="902"/>
+
+
+
+    <!-- Remtttre la vue kanban par défaut -->
+    <record  id="mass_mailing.mailing_mailing_action_mail" model="ir.actions.act_window">
+        <field name="view_mode">kanban,list,form,calendar</field>
+        <field name="context">{'default_user_id': uid, 'default_mailing_type': 'mail'}</field>
+    </record>
+
 
 </odoo>
