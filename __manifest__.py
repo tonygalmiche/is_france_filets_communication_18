@@ -12,8 +12,13 @@
     "data": [
         "security/ir.model.access.csv",
         "views/mailing_contact_views.xml",
+        "views/auth_signup_login_remove_link.xml",
     ],
     "license": "AGPL-3",
     "installable": True,
     "application": True,
+
+
+
+
 }
